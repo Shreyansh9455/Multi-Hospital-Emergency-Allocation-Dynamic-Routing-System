@@ -1,0 +1,26 @@
+{
+  "name": "med-dispatch-system",
+  "version": "1.0.0",
+  "description": "MED-DISPATCH - Multi-Hospital Emergency Allocation & Dynamic Routing System",
+  "scripts": {
+    "dev": "npm run dev:all",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "test:api": "npm --prefix server run test:api",
+    "start:server": "npm --prefix server start",
+    "build:client": "npm --prefix client run build",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "emergency-dispatch",
+    "hospital-beds",
+    "mern",
+    "dynamic-routing",
+    "socketio",
+    "leaflet",
+    "varanasi-healthcare"
+  ],
+  "author": "Shreyansh Rai",
+  "license": "ISC"
+}

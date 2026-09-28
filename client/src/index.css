@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #080c16;
+    --bg-secondary: #0e1526;
+    --bg-surface: #141d33;
+    --bg-card: rgba(20, 29, 51, 0.75);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    background-color: #080c16;
+    color: #f1f5f9;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(0, 210, 255, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.05) 0%, transparent 45%),
+      radial-gradient(circle at 50% 50%, rgba(0, 229, 153, 0.03) 0%, transparent 50%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Glass Card Utility */
+.glass-panel {
+  background: rgba(20, 29, 51, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  border-color: rgba(0, 210, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes pulse-dot {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.3); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.pulse-animation {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-slow 1.5s linear infinite;
+}

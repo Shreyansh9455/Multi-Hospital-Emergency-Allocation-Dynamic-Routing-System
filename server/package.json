@@ -1,0 +1,33 @@
+{
+  "name": "hospital-dispatch-server",
+  "version": "1.0.0",
+  "description": "Hospital Bed & Emergency Dispatch Manager Backend API",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js server.js",
+    "seed": "node seed.js",
+    "test:api": "node testApi.js"
+  },
+  "keywords": [
+    "hospital",
+    "emergency-dispatch",
+    "mongoose",
+    "express"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.9.5",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
